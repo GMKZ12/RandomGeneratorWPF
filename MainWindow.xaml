@@ -1,0 +1,24 @@
+﻿<Window x:Class="RandomGenerater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomGenerater"
+        mc:Ignorable="d"
+        Title="随机数生成器-RandomNumberGenerator-侯振楠(Github:github.com/GMKZ12)" Height="450" Width="800" ResizeMode="CanMinimize" Icon="icon12.ico" Background="#FDFFFFFF">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="396*"/>
+            <ColumnDefinition Width="397*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="RandomStart" HorizontalAlignment="Left" Height="45" Margin="220,328,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="160" FontSize="24"/>
+        <TextBox x:Name="RandomEnd" HorizontalAlignment="Right" Height="45" Margin="0,328,220.333,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="160" FontSize="24" Grid.Column="1" SpellCheck.IsEnabled="True"/>
+        <Button x:Name="GenerateRandom" Content="生成" HorizontalAlignment="Left" Height="54" Margin="17.333,249,0,0" VerticalAlignment="Top" Width="155" Click="GenerateRandomNumber" FontSize="20" Grid.Column="1"/>
+        <TextBlock x:Name="RandomText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="90" Margin="168,68,0,0" TextWrapping="Wrap" Text="随机数生成器" VerticalAlignment="Top" Width="459" FontSize="60" TextAlignment="Center" FontFamily="Microsoft YaHei UI Light" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="SelectFile" Content="读取名单" HorizontalAlignment="Left" Height="33" Margin="10,10,0,0" VerticalAlignment="Top" Width="78" Click="openSelectFile"/>
+        <TextBlock x:Name="filepathtext" HorizontalAlignment="Left" Height="33" Margin="117,10,0,0" TextWrapping="Wrap" Text="名单路径" VerticalAlignment="Top" Width="235"/>
+        <Button x:Name="Generate2" Content="根据名单" HorizontalAlignment="Left" Height="54" Margin="225,249,0,0" VerticalAlignment="Top" Width="155" Click="Generate2Click" IsEnabled="False" IsCancel="True" FontSize="18"/>
+        <TextBlock x:Name="NameText" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="63" Margin="220,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Cursor="None" TextAlignment="Center" FontSize="24"/>
+        <CheckBox x:Name="isDelayShow" Content="延时效果" HorizontalAlignment="Left" Height="17" Margin="10,68,0,0" VerticalAlignment="Top" Width="90"/>
+    </Grid>
+</Window>
